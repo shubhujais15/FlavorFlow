@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #30343F;
+}
+
+.mainHeader {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgb(151, 95, 95);
+    background-color: #E4D9FF;
+    
+}
+
+.logoNdname{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainLogo{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    padding: 15px;
+}
+.restName{
+    margin-left : 30px;
+    color: #12312b;
+    font-style: italic;
+}
+
+.mainLogo:hover{
+    opacity: 0.8;
+}
+
+.cartLogo {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    
+}
+
+.navBar{
+    display: flex;
+}
+
+.navbarList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+li{
+    
+    font-size: 22px;
+    padding: 8px;
+    margin: 45px;
+    list-style-type: none;
+    cursor: pointer;
+   
+}
+
+li > a{
+    text-decoration: none;
+    color: black;
+}
+
+.searchBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 10px;
+    
+}
+
+.inputBox{
+    height: 40px;
+    width: 400px;
+    border-radius: 20px;
+    font-size: 16px;
+    color: black;
+    text-indent: 15px;
+    outline: none;
+}
+
+.searchBtn{
+    border-radius: 20px;
+    background-color: #abb4bd;
+    color: black;
+    text-align: center;
+    height: 40px;
+    width: 80px;
+    margin-left: 18px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.searchBtn:hover{
+    background-color: rgb(31, 57, 78);
+    color: #fdffff;
+}
+
+.restPic{
+    height: 150px;
+    width: 180px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.restaurantCardItems{
+      background-color: whitesmoke;
+      height: 300px;
+      width: 200px;
+      margin: 25px;
+      padding: 5px;
+      border-radius: 8px;
+      transition: transform .5s ease;
+     
+  }
+
+.restaurantCardItems:hover{
+     cursor: pointer;
+     transform: scale(1.1);
+}
+
+.shimmerText{
+    text-align: center;
+}
+
+
+
+.final-cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 80px 30px 80px 30px;
+    align-content: space-between;
+}
+
+p{
+    
+    font-size: 15px;
+    margin-top: 4px;
+    margin-left: 20px;
+}
+
+
+
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-cards{
+    height: 300px;
+    width: 200px;
+    margin: 25px;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.final-cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .shimmerText {
+    margin: 0;
+  }
+  
+
+  .filt-btn{
+    border-radius: 20px;
+    background-color: #abb4bd;
+    color: black;
+    text-align: center;
+    height: 40px;
+    width: 200px;
+    margin-left: 70px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .filt-btn:hover{
+    background-color: rgb(31, 57, 78);
+    color: #fdffff;
+}
+
+.restmenuitems{
+    color: antiquewhite;
+}
+
+
+h1,h5{
+    margin-left: 20px;
+}
