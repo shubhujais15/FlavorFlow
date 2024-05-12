@@ -87,28 +87,3 @@ const Body = () => {
  };
 
   export default Body;
-
-
-
-  // import Restaurantcards from "./Restaurantcards.js";
-  // import resList from "../utils/mockData.js";
-  // import { useState } from "react";
-  
-
-  //   return (
-  //     <div className="bodyContainer">
-  //       <div className="searchBar">
-  //         <input type="text" className="inputBox" />
-  //         <button className="searchBtn">Search</button>
-  //       </div>
-  //       <div className="final-cards">
-  //         {resList.map((restaurant) => (
-  //           <Restaurantcards key={restaurant.info.id} resData={restaurant} />
-  //         ))}
-  //       </div>
-  //     </div>
-  //   );
-  // };
-  
-  // export default Body;
-  
