@@ -39,3 +39,10 @@ A Online Food Delivery Website Using React...
   - helps to render many pages through a link
   - In createbrowserrouter we add path of page and element that we have to shown on that page
   - outlet takes the element according to path that we select
+
+ # Components
+  - Function Based Components -- It is a funcn that returns a piece of jsx
+  - Class Based Components -- It is a class which extends react.component and it has render() method to return a piece of jsx
+  - React.Component come from by importing react
+  - componentDidMount use for api calls in class based components
+  - First constructor then return renders after that componentDidMount renders
