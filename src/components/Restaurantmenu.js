@@ -17,20 +17,20 @@ const Restaurantmenu = () => {
         setRestMenu(json.data)
     }
 
-    // if(RestMenu === null){
-    //     return <Shimmer />
-    //   }
+    if(RestMenu === null){
+        return <Shimmer />
+      }
 
-    // const {name,cuisines,cloudinaryImageId,costForTwo,avgRating} = 
-    // RestMenu?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants[0]?.info
+    const {name,cuisines,cloudinaryImageId,avgRating} = 
+    RestMenu?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants[0]?.info
 
-    // const {name,cuisines,costForTwo} = RestMenu.cards[1].card.card.gridElements.infoWithStyle.restaurants[0].info;
+    const {costForTwo} = RestMenu.cards[1].card.card.gridElements.infoWithStyle.restaurants[0].info;
     return(
         <div className="restmenuitems">
             {/* <h1>{name}</h1>
             <p>{cuisines.join(",")}--{costForTwo}</p> */}
             <ul>
-                {/* <li>{cloudinaryImageId}</li> */}
+                <li>{cloudinaryImageId}</li>
                 <li>Sandwich</li>
                 <li>Pizza</li>
                 <li>French Fries</li>
