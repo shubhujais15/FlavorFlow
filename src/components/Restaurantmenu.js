@@ -1,4 +1,5 @@
 import { useEffect, useState} from "react";
+import Shimmer from "./Shimmer";
 
 
 const Restaurantmenu = () => {
@@ -15,25 +16,23 @@ const Restaurantmenu = () => {
         const json = await data.json();
         console.log(json);
         setRestMenu(json.data)
-    }
+    };
 
-    if(RestMenu === null){
-        return <Shimmer />
-      }
+    if(RestMenu === null)
+        return <Shimmer />;
+      
 
-    const {name,cuisines,cloudinaryImageId,avgRating} = 
-    RestMenu?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants[0]?.info
+    const { name, cuisines , costForTwo } = RestMenu?.cards[2]?.card?.card.info;
+   
 
-    const {costForTwo} = RestMenu.cards[1].card.card.gridElements.infoWithStyle.restaurants[0].info;
+    const {itemCards} = RestMenu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
     return(
         <div className="restmenuitems">
-            {/* <h1>{name}</h1>
-            <p>{cuisines.join(",")}--{costForTwo}</p> */}
+            <h1>{name}</h1>
+             <h5>{cuisines.join(",")}--{costForTwo}</h5>
             <ul>
-                <li>{cloudinaryImageId}</li>
-                <li>Sandwich</li>
-                <li>Pizza</li>
-                <li>French Fries</li>
+                {itemCards.map(item => <li key={item.card.info.name}>{item.card.info.name}</li>)}
+                {/* <li>{itemCards[0]?.card?.info?.name}</li> */}
             </ul>
         </div>
     )
