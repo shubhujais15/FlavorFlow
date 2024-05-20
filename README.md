@@ -40,9 +40,16 @@ A Online Food Delivery Website Using React...
   - In createbrowserrouter we add path of page and element that we have to shown on that page
   - outlet takes the element according to path that we select
 
+   # useParams()
+  - It is used in Restaurantmenu.js to pass path id to resid in App.js which is currently open in browser
+
  # Components
   - Function Based Components -- It is a funcn that returns a piece of jsx
   - Class Based Components -- It is a class which extends react.component and it has render() method to return a piece of jsx
   - React.Component come from by importing react
   - componentDidMount use for api calls in class based components
   - First constructor then return renders after that componentDidMount renders
+
+
+ # Class Based Component Lifecycle Diagram
+ ![LifeCycle-Diagram](Class-based-component.png)
