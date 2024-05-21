@@ -119,8 +119,14 @@ li > a{
       padding: 5px;
       border-radius: 8px;
       transition: transform .5s ease;
+      /* text-decoration: none; */
      
   }
+
+.rest-detail{
+    text-decoration: none;
+    color: black;
+}
 
 .restaurantCardItems:hover{
      cursor: pointer;
@@ -130,7 +136,6 @@ li > a{
 .shimmerText{
     text-align: center;
 }
-
 
 
 .final-cards{
@@ -144,7 +149,7 @@ p{
     
     font-size: 15px;
     margin-top: 4px;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 
@@ -202,5 +207,5 @@ p{
 
 
 h1,h5{
-    margin-left: 20px;
+    margin-left: 10px;
 }
