@@ -3,6 +3,7 @@ import Restaurantcards from "./Restaurantcards.js"
 import {useEffect, useState} from "react"
 import Shimmer from "./Shimmer.js";
 import { Link } from "react-router-dom";
+import { REST_API } from "../utils/constants.js";
 
 const Body = () => {
 
@@ -24,8 +25,7 @@ const Body = () => {
   },[])
 
   const fetchData = async ()=>{
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+    const data = await fetch(REST_API);
     const json = await data.json();
     console.log(json);
     // optionalChaining
