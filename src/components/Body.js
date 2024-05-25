@@ -4,6 +4,7 @@ import {useEffect, useState} from "react"
 import Shimmer from "./Shimmer.js";
 import { Link } from "react-router-dom";
 import { REST_API } from "../utils/constants.js";
+import useOnlineStatus from "../utils/useOnlineStatus.jsx"
 
 const Body = () => {
 
@@ -11,12 +12,15 @@ const Body = () => {
   // let [ListofRestaurant , setListofRestaurant] = useState(resList);
 
   let [ListofRestaurant , setListofRestaurant] = useState([]);
+  // console.log(ListofRestaurant);
 
   //  Creating a copy of ListofRestaurant which is used for filtering restaurant list without losting the original data
   let [FilteredRestaurant , setFilteredRestaurant] = useState([]);
 
   // creating a useState to filter restaurant after searching some specific restuarants
   let [SearchText , setSearchText] = useState("");
+
+  // const addPromotedLabel = withPromotedLabel(Restaurantcards);
 
   // if no dependency array => useEffect is called on every render
   // if there is nothing in dependency array = [] => useEffect is called on initial render(just once)
@@ -27,14 +31,16 @@ const Body = () => {
   const fetchData = async ()=>{
     const data = await fetch(REST_API);
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
     // optionalChaining
     setListofRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     // setListofRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     setFilteredRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     // setFilteredRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-  }
+  }  
 
+    const onlineStatus = useOnlineStatus();
+    if(onlineStatus === false) return <h1>U are offline</h1>
 
   // Conditional Rendering
   if(ListofRestaurant.length === 0){
@@ -43,16 +49,16 @@ const Body = () => {
 
   
   return(
-    <div  className="bodyContainer">
-      <div className="searchBar">
+    <div  className="bg-slate-400 mt-2.5 m-0.5 rounded-xl">
+      <div className="flex justify-center m-1.5 p-3">
     {/* In value we pass the state variable name in which we have to set the value */}
-        <input type="text" className="inputBox" value={SearchText} 
+        <input type="text" className=" mt-3 h-10 w-96 rounded-full text-base indent-3.5 outline-none" value={SearchText} 
         onChange={(e)=>{
           setSearchText(e.target.value);
         }}></input>
 
 
-        <button className="searchBtn" 
+        <button className="bg-yellow-100 mx-3 mt-3 h-9 w-20 rounded-full" 
         onClick={()=>{
           const filteredRest = ListofRestaurant.filter(
             (res) => res.info.name.toLowerCase().includes(SearchText.toLowerCase())
@@ -65,7 +71,7 @@ const Body = () => {
           {/* setListofRestaurant(ListofRestaurant); */}
 
 
-        <button className="filt-btn" onClick={() => {
+        <button className=" bg-yellow-100 mt-3 mx-3 h-9 w-48 rounded-full" onClick={() => {
           const filteredList = ListofRestaurant.filter(
             (res) => res.info.avgRating > 4.3
           ); 
@@ -75,15 +81,18 @@ const Body = () => {
           Top Rated Restaurant
         </button>
       </div>
-      <div className="final-cards">
-        
+      <div className="flex flex-wrap my-6 ml-12">
         {/* resList is replaced with ListofRestaurant bcz now we add resList data in a state variable ListofRestaurant */}
         {FilteredRestaurant.map((restaurant) => (
           <Link 
           className="rest-detail"
           key={restaurant.info.id}
           to={"/restaurant/"+ restaurant.info.id}>
-          <Restaurantcards resData={restaurant} />
+            {/* Adding promoted label to restaurant cards */}
+            {/* {restaurant.info.promoted ? (
+              <addPromotedLabel resData={restaurant} />) : (<Restaurantcards resData={restaurant} />)
+            } */}
+           <Restaurantcards resData={restaurant} />
           </Link>
         )
         )}
