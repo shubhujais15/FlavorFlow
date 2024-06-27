@@ -12,6 +12,8 @@ A Online Food Delivery Website Using React...
     -copyright
     -contacts*/
 
+# Run code
+- npx parcel index.html
 
 # Config Driven UI
 - The api that we fetch through swiggy.com is based on config driven UI that means the data is not same for other cities like if in Bengaluru there is 50% discount on KFC that doesn't mean other cities have same discount ...The data that come from backend the crousel(Rest.. Card Data) changed based on data that comes..
@@ -53,3 +55,32 @@ A Online Food Delivery Website Using React...
 
  # Class Based Component Lifecycle Diagram
  ![LifeCycle-Diagram](Class-based-component.png)
+
+
+ # Control & UnControlled Components  (Lifting Step Up)
+  - A component that is controlled by its parent component to perform an action called Controlled component
+
+ # props Drilling
+
+ # Redux
+ - Redux is a state management library that helps to manage the state of the application
+ - It works on data layer which syncs to UI layer
+ - It is mandatory for large scale application
+ - It is a library
+ - Redux offers easy debugging
+ - React-Redux and Redux-Toolkit are two libraries of redux
+ - It has slices where each slice is connected to each component
+ - ![Redux- Modification & Updation Diagram](Redux.png)
+
+ # Redux-Toolkit
+  - Install @reduxjs/toolkit and react-redux
+  - Build our store
+  - Connect our store to our app
+  - Slice(cart slice)
+  - Dispatch(action)
+  - Selector
+
+ # Types of testing(Developer)
+ - Unit Testing
+ - Integration Testing
+ - End to End Testing - e2e Testing
