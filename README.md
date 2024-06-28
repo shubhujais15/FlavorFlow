@@ -1,5 +1,8 @@
 A Online Food Delivery Website Using React...
 
+<h1>FlavorFLow ~ Streamline Food Delivery</h1>
+
+<p>For run this - npx parcel index.html</p>
 
 # website design
 1. Header
@@ -17,11 +20,6 @@ A Online Food Delivery Website Using React...
 
 # Config Driven UI
 - The api that we fetch through swiggy.com is based on config driven UI that means the data is not same for other cities like if in Bengaluru there is 50% discount on KFC that doesn't mean other cities have same discount ...The data that come from backend the crousel(Rest.. Card Data) changed based on data that comes..
-
-
-# img
-
-![Website-Img](website_img.png)
 
 # HOOKS
     (Normal JS utility Function)
