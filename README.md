@@ -2,19 +2,6 @@ A Online Food Delivery Website Using React...
 
 <h1>FlavorFLow ~ Streamline Food Delivery</h1>
 
-<p>For run this - npx parcel index.html</p>
-
-# website design
-1. Header
-    - logo 
-    - navbar (links to other pages)
-2. Body
-    - SearchBar
-    -RestaurantCards
-3. Footer
-    -copyright
-    -contacts*/
-
 # Run code
 - npx parcel index.html
 
