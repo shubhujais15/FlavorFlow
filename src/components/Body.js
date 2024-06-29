@@ -88,7 +88,7 @@ const Body = () => {
           <Link 
           className="rest-detail"
           key={restaurant.info.id}
-          to={"/restaurant/"+ restaurant.info.id}>
+          to={"/home/restaurant/"+ restaurant.info.id}>
             {/* Adding promoted label to restaurant cards */}
             {/* {restaurant.info.promoted ? (
               <addPromotedLabel resData={restaurant} />) : (<Restaurantcards resData={restaurant} />)

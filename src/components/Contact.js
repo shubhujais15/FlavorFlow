@@ -40,7 +40,7 @@ const Contact = () => {
                                     </div>
                                 </div>
                                 <div className="p-2 w-full">
-                                    <button className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+                                    <button className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Send</button>
                                 </div>
                                 <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
                                     <a href="mailto:shubhujais@gmail.com" className="text-indigo-500">shubhujais@gmail.com</a>
