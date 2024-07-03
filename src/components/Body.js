@@ -58,7 +58,7 @@ const Body = () => {
         }}></input>
 
 
-        <button className="bg-yellow-100 hover:bg-yellow-200 mx-3 mt-3 h-9 w-20 rounded-full hover:scale-105 active:scale-95 focus:outline-none" 
+        <button className="bg-yellow-100 hover:bg-yellow-200 mx-3 mt-3 h-10 w-28 md:h-9 md:w-20 rounded-full hover:scale-105 active:scale-95 focus:outline-none" 
         onClick={()=>{
           const filteredRest = ListofRestaurant.filter(
             (res) => res.info.name.toLowerCase().includes(SearchText.toLowerCase())
@@ -71,7 +71,7 @@ const Body = () => {
           {/* setListofRestaurant(ListofRestaurant); */}
 
 
-        <button className=" bg-yellow-100 hover:bg-yellow-200 mt-3 mx-3 h-9 w-48 rounded-full hover:scale-105 active:scale-95 focus:outline-none" 
+        <button className="hidden md:inline-block md: bg-yellow-100 hover:bg-yellow-200 mt-3 mx-3 h-9 w-48 rounded-full hover:scale-105 active:scale-95 focus:outline-none" 
         onClick={() => {
           const filteredList = ListofRestaurant.filter(
             (res) => res.info.avgRating > 4.3
@@ -82,7 +82,7 @@ const Body = () => {
           Top Rated Restaurant
         </button>
       </div>
-      <div className="flex flex-wrap my-6 ml-12">
+      <div className="flex flex-wrap my-4 md:my-6  md:ml-12">
         {/* resList is replaced with ListofRestaurant bcz now we add resList data in a state variable ListofRestaurant */}
         {FilteredRestaurant.map((restaurant) => (
           <Link 
