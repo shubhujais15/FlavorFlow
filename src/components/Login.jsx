@@ -69,24 +69,24 @@ const Login = () => {
   return (
     <div className="shadow-xl">
       <Header />
-      <div className='mt-4 mx-2 rounded-lg shadow-md flex'>
-        <img className='w-1/2 h-1/2 rounded-md' src="https://wallpapercave.com/wp/wp9919642.jpg" alt="background-img" />
-        <h1 className='ml-40 mt-2 italic text-2xl text-pink-950'>Step into flavor. Sign in to enjoy your meal😊</h1>
+      <div className='mt-4 mx-2 rounded-lg shadow-md md:flex'>
+        <img className='md:w-1/2 md:h-1/2 rounded-md' src="https://wallpapercave.com/wp/wp9919642.jpg" alt="background-img" />
+        <h1 className='md:ml-40 mt-5 md:mt-2 italic text-xl md:text-2xl text-pink-950'>Step into flavor. Sign in to enjoy your meal😊</h1>
       </div>
 
           
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="absolute bg-teal-600 p-8 top-[430px] ml-[1150px] transform -translate-x-1/2 -translate-y-1/2 w-11/12 sm:w-8/12 md:w-6/12 lg:w-4/12 xl:w-3/12 text-white bg-opacity-90 rounded-xl"
+        className="absolute bg-teal-600 p-8 top-[77%] md:top-[430px] ml-[205px] md:ml-[1150px] transform -translate-x-1/2 -translate-y-1/2 w-11/12 sm:w-8/12 md:w-6/12 lg:w-4/12 xl:w-3/12 text-white bg-opacity-90 rounded-xl "
       >
-        <h1 className="py-4 font-bold text-3xl">{isSignInForm ? "Sign In" : "Sign Up"}</h1>
+        <h1 className="md:py-4 mb-4 md:mb-0 font-bold text-3xl">{isSignInForm ? "Sign In" : "Sign Up"}</h1>
 
         {!isSignInForm && (
           <input
             ref={name}
             type="text"
             placeholder="👤Full Name"
-            className="p-2 my-3 w-full text-black bg-white rounded-md outline-transparent"
+            className="p-2 my-2 md:my-3 w-full text-black bg-white rounded-md outline-transparent"
             onChange={handleInputChange}
           />
         )}
@@ -95,25 +95,25 @@ const Login = () => {
           ref={email}
           type="text"
           placeholder="✉️ Email Address"
-          className="p-2 my-3 w-full text-black bg-white rounded-md outline-transparent"
+          className="p-2 my-2 md:my-3 w-full text-black bg-white rounded-md outline-transparent"
           onChange={handleInputChange}
         />
         <input
           ref={password}
           type="password"
           placeholder="🔑 Password"
-          className="p-2 my-3 w-full text-black bg-white rounded-md outline-transparent"
+          className="p-2 my-2 md:my-3 w-full text-black bg-white rounded-md outline-transparent"
           onChange={handleInputChange}
         />
 
         <button
-          className="p-2 my-5 ml-1 w-1/2 rounded-lg bg-zinc-700 hover:bg-zinc-800 active:scale-95 focus:outline-none"
+          className="p-2 my-3 md:my-5 ml-1 w-1/2 rounded-lg bg-zinc-700 hover:bg-zinc-800 active:scale-95 focus:outline-none"
           onClick={handleButtonClick}
         >
           {isSignInForm ? "Sign In" : "Sign Up"}
         </button>
 
-        {errorMessage && <p className="text-red-500 m-1 font-bold">{errorMessage}</p>}
+        {errorMessage && <p className="text-red-500 md:m-1 mx-2 my-1 md:font-bold font-medium">{errorMessage}</p>}
 
         <div className="flex">
           <p className="mx-2">{!isSignInForm ? "Already Registered?" : "New to FlavorFLow?"}</p>
