@@ -40,7 +40,8 @@ const Header = () => {
   }, [dispatch, navigate]);
   
   return (
-    <div className="flex flex-col md:flex-row justify-between bg-pink-200 content-center shadow-xl m-0.5 rounded-xl">
+    <div className='w-screen bg-pink-200 shadow-xl m-0.5 rounded-xl'>
+    <div className="flex flex-col md:flex-row justify-between content-center ">
       <div className="flex">
         <img className="w-32 h-32 rounded-full p-4" src="https://img.freepik.com/free-vector/food-shopping-logo-template-design_460848-10299.jpg" alt="logo" />
         <div className='flex md:flex-row flex-col items-center pl-3 mt-8 md:mt-0'>
@@ -77,6 +78,7 @@ const Header = () => {
         </ul>
       </div>
       </div>}
+    </div>
     </div>
   );
 };

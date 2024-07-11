@@ -1,6 +1,6 @@
 const Contact = () => {
     return (
-        <div className="mt-2.5 m-0.5 rounded-xl flex flex-wrap justify-between">
+        <div className="mt-2.5 m-0.5 rounded-xl flex flex-wrap justify-between w-screen">
             <div className="hidden md:inline-block lg:w-1/2 md:w-full bg-gray-300 rounded-lg overflow-hidden p-10 relative">
                 <iframe 
                     width="100%" 

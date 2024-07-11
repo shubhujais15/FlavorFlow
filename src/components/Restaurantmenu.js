@@ -20,7 +20,7 @@ const Restaurantmenu = () => {
     );
     // console.log(categories)
     return (
-        <div className="text-center">
+        <div className="text-center w-screen">
             <h1 className="font-bold my-6 text-2xl">{name}</h1>
             <p className="font-semibold text-lg">{cuisines.join(", ")} -- ₹{costForTwo / 100}</p>
             <div>

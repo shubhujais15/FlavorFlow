@@ -49,7 +49,8 @@ const Body = () => {
 
   
   return(
-    <div  className="bg-slate-400 mt-2.5 m-0.5 rounded-xl">
+    <div className="w-screen bg-slate-400 m-0.5 rounded-xl">
+    <div  className="mt-2.5 ">
       <div className="flex justify-center m-1.5 p-3">
     {/* In value we pass the state variable name in which we have to set the value */}
         <input type="text" className=" mt-3 h-10 w-96 rounded-full text-base indent-3.5 outline-none focus:border-indigo-500 focus:ring-indigo-400 transition-colors duration-200 ease-in-out focus:ring-2" value={SearchText} 
@@ -98,6 +99,7 @@ const Body = () => {
         )
         )}
       </div>
+    </div>
     </div>
   );
  };
