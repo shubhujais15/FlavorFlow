@@ -65,7 +65,10 @@ A Online Food Delivery Website Using React...
   - Dispatch(action)
   - Selector
 
- # Types of testing(Developer)
- - Unit Testing
- - Integration Testing
- - End to End Testing - e2e Testing
+ ## Hosted Web App
+
+You can view the live version of the FlavorFlow by visiting the following link:
+[FlavorFlow](https://flavorflow.onrender.com/)
+Sample Login Id:
+- Email: user@gmail.com
+- password: User@123
